@@ -186,7 +186,7 @@ CREATE TABLE `movimientos_inventario` (
   CONSTRAINT `fk_mov_tipo` FOREIGN KEY (`id_tipo_movimiento`) REFERENCES `tipos_movimiento` (`id_tipo_movimiento`) ON UPDATE CASCADE,
   CONSTRAINT `chk_mov_cantidad` CHECK (`cantidad_movimiento` > 0),
   CONSTRAINT `chk_mov_stock` CHECK (`stock_actual` >= 0)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -251,7 +251,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (101,'Tornillo hexagonal 1/2 pulgada','Tornillo metálico para uso estructural',10,1),(103,'Tubo PVC 4 pulgadas','Tubo de PVC sanitario diámetro 4 pulgadas',4,2),(104,'Válvula de paso 1/2 pulgada','Válvula de paso en bronce 1/2\"',12,1),(105,'Pintura base agua blanca 1 GL','Pintura de caucho base agua color blanco',11,4),(106,'Perfil aluminio 1 pulgada x 1 pulgada','Perfil de aluminio cuadrado 1 pulgada',5,2),(107,'Interruptor simple','Interruptor eléctrico sencillo 110 V',3,1),(108,'Cemento gris 50 kg','Cemento Portland 50 kg',6,3);
+INSERT INTO `productos` VALUES (101,'Tornillo hexagonal 1/2 pulgada','Tornillo metálico para uso estructural',10,1),(102,'cable utp categoría 6','cable de red categoría 6 para datos',15,2),(103,'Tubo PVC 4 pulgadas','Tubo de PVC sanitario diámetro 4 pulgadas',4,2),(104,'Válvula de paso 1/2 pulgada','Válvula de paso en bronce 1/2\"',12,1),(105,'Pintura base agua blanca 1 GL','Pintura de caucho base agua color blanco',11,4),(106,'Perfil aluminio 1 pulgada x 1 pulgada','Perfil de aluminio cuadrado 1 pulgada',5,2),(107,'Interruptor simple','Interruptor eléctrico sencillo 110 V',3,1),(108,'Cemento gris 50 kg','Cemento Portland 50 kg',6,3);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -374,4 +374,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-06  1:14:45
+-- Dump completed on 2026-07-08  7:55:23
